@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dekut  Marketing</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ 
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <header id="header" class="d-flex align-items-center ">
+    <div class="container-fluid container-xxl d-flex align-items-center">
+
+      <div id="logo" class="me-auto">
+        <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="" title=""></a>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#Sell">Services</a></li> 
+          
+         
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      
+
+    </div>
+  </header>
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <img src="https://avatars.githubusercontent.com/u/60030078?s=400&u=367e38caab6ec729a92cb0cc537ff6af437aa580&v=4" alt="">
+      <h1 class="mb-4 pb-0"><span>Am</span> <br> Vincent</h1>
+      <p class="mb-4 pb-0">Compitent Computer Science and IT Expert</p>
+    
+      <a href="#about" class="about-btn scrollto">About  Me</a>
+      <div class="col-lg-6">
+      
+</div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>About  DekutAirDuka</h2>
+            <p>DON'T JUST CREATE A WEBSITE,<br>
+CREATE A WEBSITE THAT SELLS<br><i class="bi bi-check">Fast & Easy
+ Being a Seller on airduka is absolutely EASY.</i><br><i class="bi bi-check"> We don’t
+take any transaction fees or commissions</i></br>
+ <i class="bi bi-check">Become A Seller In THREE Easy Steps</i></br>
+ <i class="bi bi-check">Create Your Account- Add your name, phone number and
+email address to get started</i></br>
+ <i class="bi bi-check">Add Business details- Add name, physical location of your
+company, store or business</i></br>
+ <i class="bi bi-check">Add Products or Services- Add at least 5 of your
+products/ services</i></p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Where</h3>
+            <p>Dedan Kimathi University,Nyeri county</p>
+          </div>
+          <div class="col-lg-3">
+            <h2>What you should Know</h2>
+            <p>DON'T JUST CREATE A WEBSITE,<br>
+CREATE A WEBSITE THAT SELLS<br>
+ <i class="bi bi-check">Receive Enquiries Directly To Your Whatsapp</i><br>
+ <i class="bi bi-check">An E-Catalogue for your Business</i><br>
+ <i class="bi bi-check">Your Own Personal Domain</i><br>
+ <i class="bi bi-check">Your Own Personalised Dashboard</i><br>
+ <i class="bi bi-check">Page & Product Analytics</i><br>
+ <i class="bi bi-check">Your Business' Contact Details & Location</i></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Sell">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Find Customers in your University</h2>
+          <p>Receive enquiries directly to your WhatsApp</p>
+          <p><button type="button" class="btn btn-success btn-rounded"><a href="product-details.php">Create your Website</a></button></p>
+        </div>
+
+    <!-- ======= Schedule Section ======= -->
+    <section id="schedule" class="section-with-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>For Buyers</h2>
+          <p>Find Sellers in and around your University</p>
+        </div>
+
+          <?php 
+            $results = mysqli_query($db, "SELECT * FROM products"); 
+          ?>
+             
+        
+          <h2 class="sub-heading">Meet in a public place for security we care for you</h2>
+        <h3 class="sub-heading">we dont make accept online transaction, we only connect you the buyer to the seller. look at the lettest product ,click on the whatsapp icon besides it and you will be able to talk with the seller.</h3>
+
+        <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- Schdule Day 1 -->
+
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+            <?php if($results->num_rows > 0){ ?>
+               <?php while($row = $results->fetch_assoc()){ ?>           
+            <div class="row schedule-item">            
+                <table>
+              <thead>          
+              </thead>
+              <tbody>
+                <tr> 
+                <td rowspan="2">            
+              <div class="col-md-2">
+<?php 
+$imageURL = 'uploads/'.$row["pp"];
+ ?>
+                <img src="<?php echo $imageURL; ?>" width="400" 
+     height="400"/></div>
+                </td>
+                <div class="col-md-10">
+                <td>
+
+                  <h4><label>kshs.</label><?php echo $row['price']; ?></h4>
+                </td>
+                </tr>
+                <tr>          
+                <td>
+                  <a href="https://api.whatsapp.com/send?phone=<?php echo $row['phone']; ?>"><i class="bi bi-whatsapp">click here to get connected with the seller</i></a>
+                <p><?php echo $row['product_detail']; ?></p>
+                </td>
+                </tr>
+              </tbody>
+            </table>               
+              </div>
+            </div>
+            <?php } ?>  
+      <?php }else{ ?> 
+      <p class="status error">Image(s) not found...</p> 
+  <?php } ?>
+
+ 
+          </div>
+         
+
+          
+        </div>
+
+      </div>
+
+    </section>
+   
+
+    </section>
+
+ 
+    <section id="subscribe">
+      <div class="container" data-aos="zoom-in">
+        <div class="section-header">
+          <h2>Newsletter</h2>
+          <p>Lets move together.</p>
+        </div>
+
+        <form method="POST" action="#">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-10 d-flex">
+              <input type="text" class="form-control" placeholder="Enter your Email">
+              <button type="submit" class="ms-2">Subscribe</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+   
+
+     
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="section-bg">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>We are here to support you.</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <address>Bomas Street, Nyeri, Kenya</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+155895548855">+254745638455</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">elvisndegwa90@gmail.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+       
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="assets/img/logo.png" alt="TheEvenet">
+            <p>DekutAirDuka is an online marketplace that connects buyers and sellers. With DekutAirDuka, you can reach more customers and expand your business.
+
+DekutAirDuka is the only online marketplace that has listed service providers in every industry. We guarantee you will find whatever you are looking for.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Bomas Street <br>
+              Nyeri, Kimathi<br>
+              Kenya <br>
+              <strong>Phone:</strong> +254745638455<br>
+              <strong>Email:</strong> elvisndegwa90gmail.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+       
+        Designed by <a href="https://elvisndegwa90gmail.com/">Elvis Ndegwa</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
